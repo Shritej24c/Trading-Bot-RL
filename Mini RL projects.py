@@ -3,7 +3,6 @@ from stable_baselines3 import DQN, A2C, PPO, DDPG
 
 env = gym.make("LunarLander-v2")
 
-
 print(env.action_space.sample())
 print(env.observation_space.sample())
 
@@ -15,5 +14,4 @@ while True:
     action, _states = model.predict(state)
     obs, reward, done, info = env.step(action)
     env.render(mode='human')
-
 
